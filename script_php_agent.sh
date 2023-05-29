@@ -3,6 +3,8 @@
 echo "Criando repositórios e definindo permissões..."
 
 cd ..
+mkdir /opt/appdynamics
+mkdir /opt/appdynamics/php-agent
 mkdir /opt/appdynamics/php-agent/logs
 chmod -R 755 /opt/appdynamics/php-agent
 chmod 777 /opt/appdynamics/php-agent/logs
