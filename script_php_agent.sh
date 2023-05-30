@@ -10,14 +10,16 @@ chmod -R 755 /opt/appdynamics/php-agent
 chmod 777 /opt/appdynamics/php-agent/logs
 cd /opt/appdynamics/php-agent/
 
-echo "Fazendo o download do agente..."
+echo "Movendo agente para a pasta..."
+
+mv /appd_agent/appdynamics-php-agent-x64-linux-23.4.0.724.tar.bz2 /opt/appdynamics/php-agent
 
 echo "Descompactando arquivo..."
 
-tar -xvjf appdynamics-php-agent-x64-linux.tar.bz2
+tar -xvjf appdynamics-php-agent-x64-linux-23.4.0.724.tar.bz2
 
 echo "Instalando agente..."
 
-#/opt/appdynamics/php-agent/install.sh -s -a=<account_name>@<account_access_key> [--http-proxy-host=<proxy_host>] [--http-proxy-port=<proxy_port>] [-e <php_ext_dir>] [-i <php_ini_dir>] [-p <php_binary_dir>] [-v <php_version>] <controller-host> <controller-port> <app_name> <tier_name> <node_name>
+#/opt/appdynamics/php-agent/appdynamics-php-agent-linux_x64/install.sh [-s] -a=customer1@<account_access_key> [--http-proxy-host=<proxy_host>] [--http-proxy-port=<proxy_port>] [-e <php_ext_dir>] [-i <php_ini_dir>] [-p <php_binary_dir>] [-v <php_version>] --log-dir=/opt/appdynamics/php-agent/logs <controller-host> <controller-port> drive_expresso <tier_name> LNXCLOUDWEB
 
 echo "Instalação finalizada!"
